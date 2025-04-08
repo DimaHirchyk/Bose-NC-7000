@@ -1,0 +1,74 @@
+@use "helpers" as *;
+
+body {
+  @include fluid-text(20, 14);
+
+  font-family: var(--font-family-base);
+  letter-spacing: 0%;
+  color: var(--basic-text);
+  background-color: var(--color-dark);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--title-text);
+}
+h1 {
+  @include fluid-text(74, 34);
+}
+
+h2 {
+  @include fluid-text(30, 24);
+}
+h3 {
+  @include fluid-text(28, 20);
+}
+
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--red-hover-color);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: none;
+  transition-duration: 0s !important;
+}
